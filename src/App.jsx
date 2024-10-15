@@ -229,7 +229,7 @@ function App() {
         <>
             <GlobalStyle />
             <Container isPicking={isPicking}>
-                <Title isPicking={isPicking}>팀 배정 시스템</Title>
+                <Title isPicking={isPicking}>리액트 팀 랜덤 돌려돌려 돌림판</Title>
 
                 {/* 조장 입력 섹션 */}
                 <Section isPicking={isPicking}>
@@ -284,7 +284,7 @@ function App() {
                 {!isPicking && pickedNames.length > 0 && (
                     <TeamsContainer>
                         <div>
-                            <h2>A팀</h2>
+                            <h2>{leaders[0]} 팀</h2>
                             {pickedNames
                                 .filter((_, idx) => idx % 2 === 0)
                                 .map((name, idx) => (
@@ -292,7 +292,7 @@ function App() {
                                 ))}
                         </div>
                         <div>
-                            <h2>B팀</h2>
+                            <h2>{leaders[1]} 팀</h2>
                             {pickedNames
                                 .filter((_, idx) => idx % 2 !== 0)
                                 .map((name, idx) => (
